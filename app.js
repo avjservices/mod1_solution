@@ -14,7 +14,7 @@
                 var receivedOrder = $scope.order;
                 $scope.responseMessage = receivedOrder;
                 var menuItems = receivedOrder.split(',');
-                if (menuItems.length <= 4) {
+                if (menuItems.length <= 3) {
                     $scope.responseMessage = "Enjoy!"
                 }
                 else {
