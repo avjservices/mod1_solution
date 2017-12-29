@@ -5,6 +5,7 @@
     LunchCheckController.$inject = ['$scope'];
 
     function LunchCheckController($scope) {
+        $scope.order = "";
         $scope.checkMenu = function () {
             if ($scope.order === "") {
                 $scope.responseMessage = "Please enter data first";
@@ -13,7 +14,7 @@
                 var receivedOrder = $scope.order;
                 $scope.responseMessage = receivedOrder;
                 var menuItems = receivedOrder.split(',');
-                if (menuItems.length <= 3) {
+                if (menuItems.length <= 4) {
                     $scope.responseMessage = "Enjoy!"
                 }
                 else {
